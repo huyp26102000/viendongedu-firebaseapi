@@ -50,11 +50,11 @@ app.post("/notify", function (req, res) {
       ...message,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
       tokens: tokenChunk.map((e) => ({
-        token:
-          "f5TZMnVMQwSrJNVEXrBnXk:APA91bG3Pp0u2azuDTkELPfIyJMXoP-lf_GwPOUvIOaYh2cIUNLr9mZL1wMaYpAkkdWuQ_0Ufuti0VkgmPBCAPQc5bbIGMNneHuqvBe3lo3iHV2PBtjZRff9zy7fK4wm9QaEDe_i-IOJ",
+        token: e.trim(),
         status: 0,
       })),
     };
+    console.log(fsNotificationData);
     // create noti data
     firestoreDB
       .collection("Notification")

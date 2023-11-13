@@ -112,5 +112,5 @@ async function sendMessage(token, title, msg, channel) {
 }
 
 app.listen(port, () => {
-  console.log(`Example app listening at ${port}`);
+  console.log(`Viendong firebase api listening at ${port}`);
 });
